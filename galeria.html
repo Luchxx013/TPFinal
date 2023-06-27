@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <title>Galeria de imagenes</title>
+</head>
+
+<body>
+    <header class="header">
+        <h1 class="titulo">Todo para tu PC!</i></h1>
+    </header>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">Inicio</a>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">To do List</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="galeria.html">Productos</a>
+                    </li>
+                </ul>
+
+            </div>
+    </nav>
+
+    <h2>Productos en Stock</h2>
+
+    <div class="gallery">
+        <div class="gallery-item">
+            <img src="imagenes/imagen1.jpg" alt="Imagen 1" onclick="openModal('imagenes/imagen1.jpg')">
+            <p>64GB RAM DDR4 FURY BEAST</p>
+        </div>
+
+        <div class="gallery-item">
+            <img src="imagenes/imagen2.jpg" alt="Imagen 2" onclick="openModal('imagenes/imagen2.jpg')">
+            <p>RYZEN 7 5700G</p>
+        </div>
+
+        <div class="gallery-item">
+            <img src="imagenes/imagen3.jpg" alt="Imagen 3" onclick="openModal('imagenes/imagen3.jpg')">
+            <p>NVIDIA RTX4090</p>
+        </div>
+    </div>
+
+    <div id="myModal" class="modal">
+        <span class="close" onclick="closeModal()">X</span>
+        <div class="modal-content">
+            <img id="modalImage" src="">
+        </div>
+    </div>
+
+</body>
+
+</html>
