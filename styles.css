@@ -1,0 +1,29 @@
+.header{
+    background-color: rgb(53, 53, 53);
+    color: white;
+    height: 70px;
+    display: flex;
+    align-items: center;
+}
+
+.titulo{
+    padding: 5px;
+}
+
+.divForm{
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+#contactForm{
+    display: flex;
+    background-color: lightgrey;
+    padding: 20px;
+    flex-direction: column;
+    width: 50%;
+    border-radius: 6px;
+}
