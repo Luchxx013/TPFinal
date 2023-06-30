@@ -45,6 +45,7 @@
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
+    cursor: pointer;
   }
   
   .gallery-item img {
@@ -83,4 +84,11 @@
   .close{
     font-size: 30px;
     color: antiquewhite;
+  }
+
+  .divTitulo{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 5px;
   }

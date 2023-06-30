@@ -9,9 +9,19 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <title>Galeria de imagenes</title>
+
+    <script>
+        const aProductosImportados = [{ id: "ram", src: "imagenes/imagen3.jpg", producto: "64GB RAM DDR4 FURY BEAST" },
+                                        { id: "ryzen", src: "imagenes/imagen2.jpg", producto: "RYZEN 7 5700G" },
+                                        { id: "grafica", src: "imagenes/imagen3.jpg", producto: "NVIDIA RTX4090" },
+                                        { id: "i3", src: "imagenes/imagen4.jpg", producto: "INTEL CORE 13 10TH GEN" },
+                                        { id: "gabinete", src: "imagenes/imagen5.jpg", producto: "GABINETE ACRILICO RGB" },
+                                        { id: "razer", src: "imagenes/imagen6.jpg", producto: "COMBO RAZER TECLADO + MOUSE + AURICULARES" },
+                                        ];
+    </script>
 </head>
 
-<body>
+<body onload="dibujarProductos(aProductosImportados)">
     <header class="header">
         <h1 class="titulo">Todo para tu PC!</i></h1>
     </header>
@@ -32,22 +42,36 @@
             </div>
     </nav>
 
-    <h2>Productos en Stock</h2>
+    <div class="divTitulo">
+        <h2>Productos importados</h2>
+        <a class="btn btn-primary" href="#productosenstock">Ver productos en stock</a>
+    </div>
 
-    <div class="gallery">
+    <div id="listadoimportado" class="gallery">
+    </div>
+
+    <div id="myModal" class="modal">
+        <span class="close" onclick="closeModal()">X</span>
+        <div class="modal-content">
+            <img id="modalImage" src="">
+        </div>
+    </div>
+
+    <div class="divTitulo">
+        <h2>Productos en stock</h2>
+    </div>
+
+    <div id="productosenstock" class="gallery">
         <div class="gallery-item">
-            <img src="imagenes/imagen1.jpg" alt="Imagen 1" onclick="openModal('imagenes/imagen1.jpg')">
-            <p>64GB RAM DDR4 FURY BEAST</p>
+            <img src="imagenes/imagen7.png" alt="Imagen 1" onclick="openModal('imagenes/imagen7.png')">
+            <p>MOUSE USB</p>
+            <p>$2000</p>
         </div>
 
         <div class="gallery-item">
-            <img src="imagenes/imagen2.jpg" alt="Imagen 2" onclick="openModal('imagenes/imagen2.jpg')">
-            <p>RYZEN 7 5700G</p>
-        </div>
-
-        <div class="gallery-item">
-            <img src="imagenes/imagen3.jpg" alt="Imagen 3" onclick="openModal('imagenes/imagen3.jpg')">
-            <p>NVIDIA RTX4090</p>
+            <img src="imagenes/imagen8.png" alt="Imagen 2" onclick="openModal('imagenes/imagen8.png')">
+            <p>JOYSTICK PS4 GENERICO</p>
+            <p>$11.000</p>
         </div>
     </div>
 

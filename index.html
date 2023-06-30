@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js"></script>
     <link rel="stylesheet" href="styles.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
@@ -45,60 +46,6 @@
             <input class="btn btn-primary" type="submit" value="Enviar">
         </form>
     </div>
-    <script>
-        function submitForm(event) {
-            event.preventDefault();
-
-            var nombre = document.getElementById("name").value;
-            var email = document.getElementById("email").value;
-            var message = document.getElementById("message").value;
-
-            // Valido los campos
-            nombrevalido = validaNombre(nombre);
-            emailvalido = validaEmail(email);
-
-            if (emailvalido == true && nombrevalido == true) {
-
-                // Mostrar los datos por consola
-                console.log("Nombre: " + nombre);
-                console.log("Email: " + email);
-                console.log("Mensaje: " + message);
-
-                alert("Gracias por contactarnos!")
-
-                // Limpia el formulario
-                document.getElementById("contactForm").reset();
-            }
-        }
-
-        //Funcion que valida el email
-        function validaEmail(xidemail) {
-            var email = xidemail;
-
-            var emailValido = /^\w+([.-_+]?\w+)*@\w+([.-]?\w+)*(\.\w{2,10})+$/;
-            if (emailValido.test(email)) {
-                return true;
-            } else {
-                alert("Por favor ingrese un email valido");
-                return false;
-            }
-        }
-
-        //Funcion que valida el nombre (que sea mas largo que 3 caracteres)
-        function validaNombre(xidnombre) {
-
-            var nombre = xidnombre;
-
-            if (nombre.length > 3) {
-                return true;
-            } else {
-                alert("Por favor ingrese un nombre valido");
-                return false;
-            }
-
-        }
-
-    </script>
 </body>
 
 </html>
