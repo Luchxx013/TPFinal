@@ -34,13 +34,13 @@
         <p>Contactanos!</p>
         <form id="contactForm" onsubmit="submitForm(event)">
             <label for="name">Nombre:</label>
-            <input type="text" class="form-control" id="name" name="name" required><br><br>
+            <input type="text" class="form-control" id="name" name="name"><br><br>
 
             <label for="email">Email:</label>
-            <input type="email" class="form-control" id="email" name="email" required><br><br>
+            <input type="text" class="form-control" id="email" name="email"><br><br>
 
             <label for="message">Mensaje:</label>
-            <textarea id="message" class="form-control" name="message" required></textarea><br><br>
+            <textarea id="message" class="form-control" name="message"></textarea><br><br>
 
             <input class="btn btn-primary" type="submit" value="Enviar">
         </form>
@@ -49,21 +49,55 @@
         function submitForm(event) {
             event.preventDefault();
 
-            // Obtengo los valores ingresados por el usuario
-            var name = document.getElementById("name").value;
+            var nombre = document.getElementById("name").value;
             var email = document.getElementById("email").value;
             var message = document.getElementById("message").value;
 
-            // Mostrar los datos por consola
-            console.log("Nombre: " + name);
-            console.log("Email: " + email);
-            console.log("Mensaje: " + message);
+            // Valido los campos
+            nombrevalido = validaNombre(nombre);
+            emailvalido = validaEmail(email);
 
-            alert("Gracias por contactarnos!")
+            if (emailvalido == true && nombrevalido == true) {
 
-            // Limpia el formulario
-            document.getElementById("contactForm").reset();
+                // Mostrar los datos por consola
+                console.log("Nombre: " + nombre);
+                console.log("Email: " + email);
+                console.log("Mensaje: " + message);
+
+                alert("Gracias por contactarnos!")
+
+                // Limpia el formulario
+                document.getElementById("contactForm").reset();
+            }
         }
+
+        //Funcion que valida el email
+        function validaEmail(xidemail) {
+            var email = xidemail;
+
+            var emailValido = /^\w+([.-_+]?\w+)*@\w+([.-]?\w+)*(\.\w{2,10})+$/;
+            if (emailValido.test(email)) {
+                return true;
+            } else {
+                alert("Por favor ingrese un email valido");
+                return false;
+            }
+        }
+
+        //Funcion que valida el nombre (que sea mas largo que 3 caracteres)
+        function validaNombre(xidnombre) {
+
+            var nombre = xidnombre;
+
+            if (nombre.length > 3) {
+                return true;
+            } else {
+                alert("Por favor ingrese un nombre valido");
+                return false;
+            }
+
+        }
+
     </script>
 </body>
 
