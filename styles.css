@@ -1,94 +1,151 @@
-.header{
-    background-color: rgb(53, 53, 53);
-    color: white;
-    height: 70px;
-    display: flex;
-    align-items: center;
+.fondo-gris {
+  background-color: lightgray;
 }
 
-.titulo{
-    padding: 5px;
+.header {
+  background-color: rgb(53, 53, 53);
+  color: white;
+  height: 70px;
+  display: flex;
+  align-items: center;
 }
 
-.divForm{
-    margin: 10px;
-    padding: 10px;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
+.titulo {
+  padding: 5px;
 }
 
-#contactForm{
-    display: flex;
-    background-color: lightgrey;
-    padding: 20px;
-    flex-direction: column;
-    width: 50%;
-    border-radius: 6px;
+.divForm {
+  margin: 10px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+#contactForm {
+  display: flex;
+  background-color: white;
+  padding: 20px;
+  flex-direction: column;
+  width: 50%;
+  border-radius: 6px;
 }
 
 /*  GALERIA DE IMAGENES  */
 
 .gallery {
-    display: flex;
-    flex-wrap: wrap;
-  }
-  
-  .gallery-item {
-    display: flex;
-    margin: 10px;
-    width: auto;
-    padding: 10px;
-    background-color: lightgray;
-    border-radius: 10px;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: column;
-    cursor: pointer;
-  }
-  
-  .gallery-item img {
-    width: 200px;
-    margin: 10px;
-    border-radius: 6px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-  
-  .modal {
-    display: none;
-    position: fixed;
-    z-index: 999;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.9);
-  }
-  
-  .modal-content {
-    display: block;
-    margin: 10% auto;
-    max-width: 800px;
-    align-items: center;
-  }
-  
-  .modal-content img {
-    display: block;
-    width: 50%;
-    height: auto;
-  }
+  display: flex;
+  flex-wrap: wrap;
+}
 
-  .close{
-    font-size: 30px;
-    color: antiquewhite;
-  }
+.gallery-item {
+  display: flex;
+  margin: 10px;
+  width: auto;
+  padding: 10px;
+  background-color: white;
+  border-radius: 10px;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  cursor: pointer;
+}
 
-  .divTitulo{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 5px;
-  }
+.gallery-item img {
+  width: 200px;
+  margin: 10px;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal-content {
+  display: block;
+  margin: 10% auto;
+  max-width: 800px;
+  align-items: center;
+}
+
+.modal-content img {
+  display: block;
+  width: 50%;
+  height: auto;
+}
+
+.close {
+  font-size: 30px;
+  color: antiquewhite;
+}
+
+.divTitulo {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 5px;
+}
+
+/* TODO LIST */
+
+.control-tareas {
+  display: flex;
+  flex-direction: row;
+}
+
+
+.completa {
+  border-width: 2px;
+  border-style: solid;
+  border-color: lightgray;
+  text-decoration: line-through;
+  color: gray;
+  background-color: lightgray;
+  padding: 10px;
+  margin: 5px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: large;
+  box-shadow: 3px 5px 5px 0px rgba(0, 0, 0, 0.11);
+  -webkit-box-shadow: 3px 5px 5px 0px rgba(0, 0, 0, 0.11);
+  -moz-box-shadow: 3px 5px 5px 0px rgba(0, 0, 0, 0.11);
+}
+
+.pendiente {
+  border-width: 2px;
+  border-style: solid;
+  border-color: lightgray;
+  padding: 10px;
+  margin: 5px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: large;
+  box-shadow: 3px 5px 5px 0px rgba(0, 0, 0, 0.11);
+  -webkit-box-shadow: 3px 5px 5px 0px rgba(0, 0, 0, 0.11);
+  -moz-box-shadow: 3px 5px 5px 0px rgba(0, 0, 0, 0.11);
+}
+
+.containerTodoList {
+  background-color: white;
+  margin: 10px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 20px;
+}
